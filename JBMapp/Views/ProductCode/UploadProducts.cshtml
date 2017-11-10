@@ -1,0 +1,105 @@
+﻿@using Core.Data.Models;
+@model  IList<ProductCode>
+
+@{
+    ViewBag.Title = "Upload Product Code";
+}
+
+
+<h3>Upload Product Code</h3>
+<br />
+
+@using (Html.BeginForm("UploadProducts", "ProductCode", FormMethod.Post, new { enctype = "multipart/form-data", id = "frmMain" }))
+{
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 well">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <input type="file" name="file" class="form-control" />
+                    </div>
+                    <div class="col-lg-6">
+                        <input class="btn btn-primary" type="submit" name="Submit" id="Submit" value="Upload" />
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    if (Model != null)
+    {
+        int ctr = 0;
+        <table class="table table-bordered table-condensed" id="ProductCodes">
+            <thead>
+                <tr>
+                    <th>Brand</th>
+                    <th>Product Code</th>
+                    <th>MediaCompany</th>
+                    <th>Script</th>
+                    <th>Offer</th>
+                    <th>Script</th>
+                </tr>
+            </thead>
+            <tbody>
+
+              
+               @foreach (ProductCode pc in Model)
+                {
+                <tr>
+                    <td>
+                        @pc.Brand
+                        @Html.HiddenFor(m => m[ctr].Brand)
+                    </td>
+                    <td>
+                        @pc.PCode
+                        @Html.HiddenFor(m => m[ctr].PCode)
+                    </td>
+                    <td>
+                        @pc.MediaCompany
+                        @Html.HiddenFor(m => m[ctr].MediaCompany)
+                    </td>
+                    <td>
+                        @pc.Script
+                        @Html.HiddenFor(m => m[ctr].Script)
+                    </td>
+                    <td>
+                        @pc.Offer
+                        @Html.HiddenFor(m => m[ctr].Offer)
+                    </td>
+                    <td>
+                        @*@Html.DropDownList("ScriptTemplate",null, new { @class = "form-control", @id = "ScriptTemplate" })*@
+                        <select name="[@ctr].ScriptTemplate" class="form-control" id="ScriptTemplate">
+                            @foreach (SelectListItem ps in @ViewBag.ScriptTemplate)
+                            {
+                                <option value="@ps.Value">@ps.Text</option>
+                            }
+                            <option value="" selected>Please Select</option>
+                        </select>
+                    </td>
+                </tr>
+                ctr = ctr + 1;
+                }
+
+
+            </tbody>
+        </table>
+
+        <input type="submit" class="btn btn-primary" name="Submit" value="Process" />
+    }
+}
+
+@{
+    if (ViewData["Error"] != null)
+    {
+        <script>
+            alert('@ViewData["Error"].ToString()');
+        </script>
+    }
+    if (ViewData["Success"] != null)
+    {
+        <script>
+            alert('@ViewData["Success"].ToString()');
+        </script>
+    }
+}
+

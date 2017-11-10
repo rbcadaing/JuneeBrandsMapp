@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="SearchActiveDirectory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchActiveDirectoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchActiveDirectoryResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEmployeeGovernmentID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="eID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEmployeeGovernmentIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEmployeeGovernmentIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SearchActiveDirectorySoapIn">
+    <wsdl:part name="parameters" element="tns:SearchActiveDirectory" />
+  </wsdl:message>
+  <wsdl:message name="SearchActiveDirectorySoapOut">
+    <wsdl:part name="parameters" element="tns:SearchActiveDirectoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeeGovernmentIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEmployeeGovernmentID" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeeGovernmentIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEmployeeGovernmentIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchActiveDirectoryHttpGetIn">
+    <wsdl:part name="uName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SearchActiveDirectoryHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeeGovernmentIDHttpGetIn">
+    <wsdl:part name="eID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeeGovernmentIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SearchActiveDirectoryHttpPostIn">
+    <wsdl:part name="uName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SearchActiveDirectoryHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeeGovernmentIDHttpPostIn">
+    <wsdl:part name="eID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeeGovernmentIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="ActiveDirectoryWebSoap">
+    <wsdl:operation name="SearchActiveDirectory">
+      <wsdl:input message="tns:SearchActiveDirectorySoapIn" />
+      <wsdl:output message="tns:SearchActiveDirectorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeGovernmentID">
+      <wsdl:input message="tns:GetEmployeeGovernmentIDSoapIn" />
+      <wsdl:output message="tns:GetEmployeeGovernmentIDSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ActiveDirectoryWebHttpGet">
+    <wsdl:operation name="SearchActiveDirectory">
+      <wsdl:input message="tns:SearchActiveDirectoryHttpGetIn" />
+      <wsdl:output message="tns:SearchActiveDirectoryHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeGovernmentID">
+      <wsdl:input message="tns:GetEmployeeGovernmentIDHttpGetIn" />
+      <wsdl:output message="tns:GetEmployeeGovernmentIDHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ActiveDirectoryWebHttpPost">
+    <wsdl:operation name="SearchActiveDirectory">
+      <wsdl:input message="tns:SearchActiveDirectoryHttpPostIn" />
+      <wsdl:output message="tns:SearchActiveDirectoryHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeGovernmentID">
+      <wsdl:input message="tns:GetEmployeeGovernmentIDHttpPostIn" />
+      <wsdl:output message="tns:GetEmployeeGovernmentIDHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ActiveDirectoryWebSoap" type="tns:ActiveDirectoryWebSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SearchActiveDirectory">
+      <soap:operation soapAction="http://tempuri.org/SearchActiveDirectory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeGovernmentID">
+      <soap:operation soapAction="http://tempuri.org/GetEmployeeGovernmentID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ActiveDirectoryWebSoap12" type="tns:ActiveDirectoryWebSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SearchActiveDirectory">
+      <soap12:operation soapAction="http://tempuri.org/SearchActiveDirectory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeGovernmentID">
+      <soap12:operation soapAction="http://tempuri.org/GetEmployeeGovernmentID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ActiveDirectoryWebHttpGet" type="tns:ActiveDirectoryWebHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="SearchActiveDirectory">
+      <http:operation location="/SearchActiveDirectory" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeGovernmentID">
+      <http:operation location="/GetEmployeeGovernmentID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ActiveDirectoryWebHttpPost" type="tns:ActiveDirectoryWebHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="SearchActiveDirectory">
+      <http:operation location="/SearchActiveDirectory" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeGovernmentID">
+      <http:operation location="/GetEmployeeGovernmentID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ActiveDirectoryWeb">
+    <wsdl:port name="ActiveDirectoryWebSoap" binding="tns:ActiveDirectoryWebSoap">
+      <soap:address location="https://vxiphsql2.vxi.com.ph/it/appdevsvc/WebService1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ActiveDirectoryWebSoap12" binding="tns:ActiveDirectoryWebSoap12">
+      <soap12:address location="https://vxiphsql2.vxi.com.ph/it/appdevsvc/WebService1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ActiveDirectoryWebHttpGet" binding="tns:ActiveDirectoryWebHttpGet">
+      <http:address location="https://vxiphsql2.vxi.com.ph/it/appdevsvc/WebService1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ActiveDirectoryWebHttpPost" binding="tns:ActiveDirectoryWebHttpPost">
+      <http:address location="https://vxiphsql2.vxi.com.ph/it/appdevsvc/WebService1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

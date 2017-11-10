@@ -1,0 +1,70 @@
+﻿@using Core.Data.Models;
+
+@model ProductCode
+@{
+    ViewBag.Title = "EditProductCode";
+}
+
+<h3>EditProductCode</h3>
+
+
+
+<div class="container">
+    <div class="well">
+        @using (Html.BeginForm("EditProductCode", "ProductCode",FormMethod.Post))
+        {
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label for="Brand">Brand</label>
+                        @Html.TextBoxFor(m => m.Brand, new { @class = "form-control", @id = "Brand" })
+                    </div>
+
+                    <div class="form-group">
+                        <label for="PCode">Product Code</label>
+                        @Html.TextBoxFor(m => m.PCode, new { @class = "form-control", @id = "PCode" })
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Script">Script</label>
+                        @Html.TextBoxFor(m => m.Script, new { @class = "form-control", @id = "Script" })
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Offer">Offer</label>
+                        @Html.TextBoxFor(m => m.Offer, new { @class = "form-control", @id = "Offer" })
+                    </div>
+
+                    <div class="form-group">
+                        <label for="BrandCode">Brand Code</label>
+                        @Html.TextBoxFor(m => m.BrandCode, new { @class = "form-control", @id = "BrandCode" })
+                    </div>
+
+                    <div class="form-group">
+                        <label for="MediaCompany">Media Company</label>
+                        @Html.TextBoxFor(m => m.MediaCompany, new { @class = "form-control", @id = "MediaCompany" })
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ScriptTemplate">Script Template</label>
+                        @*@Html.TextBoxFor(m => m.ScriptTemplate, new { @class = "form-control", @id = "ScriptTemplate"})*@
+                        @Html.DropDownList("ScriptTemplate", null, new { @class = "form-control", @id = "ScriptTemplate" })
+
+                    </div>
+                    <div class="col-lg-6 text-right">
+                        <input type="submit" value="Submit" class="btn btn-primary" />
+                    </div>
+
+                </div>
+            </div>
+        }
+    </div>
+
+    @if (ViewData["Err"] != null)
+    {
+        <script type="text/javascript">
+            alert('@ViewData["Err"].ToString()');
+        </script>
+    }
+</div>
+

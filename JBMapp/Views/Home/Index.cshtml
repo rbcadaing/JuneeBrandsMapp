@@ -1,0 +1,118 @@
+﻿@using JBMapp.Models;
+
+@model IList<MediaAssignments>
+
+@{
+    ViewBag.Title = "Home Page";
+}
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+<link href="~/Content/font-awesome.css" rel="stylesheet" />
+
+<h3>Upload Media Assignments</h3>
+<br />
+@using (Html.BeginForm("Index", "Home", FormMethod.Post, new { enctype = "multipart/form-data", id = "frmMain" }))
+{
+    <div class="row">
+        <div class="col-lg-12 well">
+            <div class="row">
+                <div class="col-lg-3">
+                    @Html.DropDownList("MediaCompany", null, new { @class = "form-control" })
+                </div>
+                <div class="col-lg-3">
+                    <input type="file" name="file" class="form-control" />
+                </div>
+                <div class="col-lg-6">
+                    <input class="btn btn-primary" type="submit" name="Submit" id="Submit" value="Upload" /> 
+                </div>
+
+                <br />
+                @if (ViewData["InvalidMedia"] != null)
+                {
+                    <script>
+                        alert('@ViewData["InvalidMedia"].ToString()')
+                    </script>
+                }
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    <div class=" container">
+        <div class="row">
+            <div class="col-lg-12">
+                <table class="table table-bordered table-condensed" id="ProductCodes">
+                    <thead>
+                        <tr>
+                            <th>Company</th>
+                            <th>Action</th>
+                            <th>Station</th>
+                            <th>City State</th>
+                            <th>Phone Number</th>
+                            <th>Air Date</th>
+                            <th>Product Code</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model != null)
+                        {
+                            int ctr = 0;
+                            foreach (MediaAssignments ma in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @ma.Company
+                                        @Html.HiddenFor(m => m[ctr].Company)
+                                    </td>
+                                    <td>
+                                        @ma.Action
+                                        @Html.HiddenFor(m => m[ctr].Action)
+                                    </td>
+                                    <td>
+                                        @ma.Station
+                                        @Html.HiddenFor(m => m[ctr].Station)
+                                    </td>
+                                    <td>
+                                        @ma.CityState
+                                        @Html.HiddenFor(m => m[ctr].CityState)
+                                    </td>
+                                    <td>
+                                        @ma.PhoneNumber
+                                        @Html.HiddenFor(m => m[ctr].PhoneNumber)
+                                    </td>
+                                    <td>
+                                        @ma.AirDate
+                                        @Html.HiddenFor(m => m[ctr].AirDate)
+                                    </td>
+                                    <td>
+                                        @ma.ProductCode
+                                        @Html.HiddenFor(m => m[ctr].ProductCode)
+                                    </td>
+                                </tr>
+                                ctr = ctr + 1;
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        @if (Model != null && ViewData["MediaAssignmentSuccess"] == null)
+        {
+            <div class="row">
+                <div class="col-lg-12">
+                    <input  class="btn btn-primary" type="submit" name="Submit" id="Process" value="Process">
+                </div>
+            </div>
+        }
+    </div>
+}
+
+@if (ViewData["MediaAssignmentSuccess"] != null)
+{
+    <script>
+        alert('@ViewData["MediaAssignmentSuccess"].ToString()')
+    </script>
+}
+

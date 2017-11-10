@@ -1,0 +1,5 @@
+D:\JuneeBrandsMAPP\JuneeBrandsMAPP\Core.Data\bin\Debug\Core.Data.dll
+D:\JuneeBrandsMAPP\JuneeBrandsMAPP\Core.Data\bin\Debug\Core.Data.pdb
+D:\JuneeBrandsMAPP\JuneeBrandsMAPP\Core.Data\obj\Debug\Core.Data.dll
+D:\JuneeBrandsMAPP\JuneeBrandsMAPP\Core.Data\obj\Debug\Core.Data.pdb
+D:\JuneeBrandsMAPP\JuneeBrandsMAPP\Core.Data\obj\Debug\Core.Data.csprojResolveAssemblyReference.cache

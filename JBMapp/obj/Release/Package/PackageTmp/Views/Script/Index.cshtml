@@ -1,0 +1,36 @@
+﻿@using Core.Data.Models;
+
+@model IEnumerable<PromoScript>
+
+
+
+<h2>Script</h2>
+@Html.ActionLink("Add New Script", "AddNewScript", "Script")
+<table class="table table-bordered table-condensed" id="Script">
+    <thead>
+        <tr>
+            <th>Template</th>
+            <th>Script Name</th>
+            <th>Bi ScriptCode</th>
+            <th>Script Description</th>
+            <th>Core Offer Sales Tax</th>
+            <th>Cross Sales Tax</th>
+         
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (PromoScript sc in Model)
+        {
+            <tr>
+                @*<td>@sc.ScriptTemplate</td>*@
+                <td>@Html.ActionLink(@sc.ScriptTemplate, "EditScript", "Script", new { @tId = @sc.ScriptTemplate }, null)</td>
+                <td>@sc.ScriptName</td>
+                <td>@sc.BiScriptCode</td>
+                <td>@sc.Description</td>
+                <td>@sc.CoreOfferSalesTax</td>
+                <td>@sc.CrossSalesTax</td>
+                
+            </tr>
+        }
+    </tbody>
+</table>

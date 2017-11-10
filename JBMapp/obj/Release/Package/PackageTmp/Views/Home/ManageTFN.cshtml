@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "ManageTFN";
+}
+
+<h2>ManageTFN</h2>
+
+<div class="row">
+    @using (Html.BeginForm("ManageTFN", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+
+        <input type="file" name="file" />
+        <input type="submit" name="Submit" id="Submit" value="Upload" />
+    }
+
+    @{
+        if (ViewData["InvalidMedia"] != null)
+        {
+            <div id="successMessage">
+                @ViewData["InvalidMedia"].ToString()
+            </div>
+        }
+    }
+</div>

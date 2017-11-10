@@ -1,0 +1,40 @@
+﻿@using Core.Data.Models;
+@model IEnumerable<ProductCode>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h3>Product Code Master</h3>
+
+@Html.ActionLink("Upload List Of Products", "UploadProducts", "ProductCode")
+
+<table class="table table-bordered table-condensed">
+    <thead>
+        <tr>
+            <th>Brand</th>
+            <th>Product Code</th>
+            <th>Script</th>
+            <th>Offer</th>
+            <th>Brand Code</th>
+            <th>Media Company</th>
+            <th>Script Template</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (ProductCode item in Model)
+        {
+            <tr>
+                <td>@item.Brand</td>
+                <td>@Html.ActionLink(@item.PCode, "EditProductCode", "ProductCode", new { @pId = @item.PCode }, null) </td>
+                <td>@item.PCode</td>
+                <td>@item.Script</td>
+                <td>@item.Offer</td>
+                <td>@item.BrandCode</td>
+                <td>@item.MediaCompany</td>
+                <td>@item.ScriptTemplate</td>
+            </tr>
+        }
+    </tbody>
+
+</table>

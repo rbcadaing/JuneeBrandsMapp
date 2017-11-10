@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Data", "Core.Data\Core.Data.csproj", "{D275699D-EB8C-48C9-A067-78FC3AEB4F58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JBMapp", "JBMapp\JBMapp.csproj", "{D16E13CA-872E-424A-A378-91324813A20F}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://vxiphapp2.vxi.com.ph:8080/tfs/operations%20group
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Core.Data\\Core.Data.csproj
+		SccProjectName1 = Core.Data
+		SccLocalPath1 = Core.Data
+		SccProjectUniqueName2 = JBMapp\\JBMapp.csproj
+		SccProjectName2 = JBMapp
+		SccLocalPath2 = JBMapp
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D275699D-EB8C-48C9-A067-78FC3AEB4F58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D275699D-EB8C-48C9-A067-78FC3AEB4F58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D275699D-EB8C-48C9-A067-78FC3AEB4F58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D275699D-EB8C-48C9-A067-78FC3AEB4F58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D16E13CA-872E-424A-A378-91324813A20F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D16E13CA-872E-424A-A378-91324813A20F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D16E13CA-872E-424A-A378-91324813A20F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D16E13CA-872E-424A-A378-91324813A20F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

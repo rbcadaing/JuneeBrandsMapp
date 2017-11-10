@@ -1,0 +1,70 @@
+﻿@using Core.Data.Models;
+@model PromoScript
+
+@{
+    ViewBag.Title = "EditScript";
+}
+
+<h2>EditScript</h2>
+
+<div class="container">
+    <div class="well">
+        @using (Html.BeginForm("EditScript", "Script"))
+        {
+            @Html.Hidden("OldScriptCode", @Model.ScriptTemplate)
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label for="Template">Template</label>
+                        @Html.TextBoxFor(m => m.ScriptTemplate, new { @class = "form-control", @id = "Template" })
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ScriptName">Script Name</label>
+                        @Html.TextBoxFor(m => m.ScriptName, new { @class = "form-control", @id = "ScriptName" })
+                    </div>
+
+                    <div class="form-group">
+                        <label for="BiScriptCode">Bi Script Code</label>
+                        @Html.TextBoxFor(m => m.BiScriptCode, new { @class = "form-control", @id = "BiScriptCode" })
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Description">Script Description</label>
+                        @Html.TextBoxFor(m => m.Description, new { @class = "form-control", @id = "Description" })
+                    </div>
+
+                    <div class="form-group">
+                        <label for="CoreOfferSalesTax">Core Offer Sales Tax</label>
+                        @Html.TextBoxFor(m => m.CoreOfferSalesTax, new { @class = "form-control", @id = "CoreOfferSalesTax" })
+                    </div>
+
+                    <div class="form-group">
+                        <label for="CrossSalesTax">Cross Sales Tax</label>
+                        @Html.TextBoxFor(m => m.CrossSalesTax, new { @class = "form-control", @id = "CrossSalesTax" })
+                    </div>
+
+                    <div class="form-group">
+                        <label for="BrandCode">BrandCode</label>
+                        @*@Html.TextBoxFor(m => m.BrandCode, new { @class = "form-control", @id = "BrandCode", @maxlength = "2" })*@
+                        @Html.DropDownList("BrandCode", null, new { @class = "form-control" })
+
+                    </div>
+
+                    <div class="col-lg-6 text-right">
+                        <input type="submit" value="Update" class="btn btn-primary" />
+                    </div>
+
+                </div>
+            </div>
+        }
+    </div>
+
+    @if (ViewData["Err"] != null)
+    {
+        <script type="text/javascript">
+            alert('@ViewData["Err"].ToString()');
+        </script>
+    }
+</div>

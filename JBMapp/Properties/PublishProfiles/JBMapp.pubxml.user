@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>\\VXIPHWEB01C\D$\JuneeBrands\JBMapp</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>06/06/2017 05:21:13</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.pdb">
+      <publishTime>06/06/2017 05:21:13</publishTime>
+    </File>
+    <File Include="bin/Core.Data.dll">
+      <publishTime>09/17/2017 06:03:19</publishTime>
+    </File>
+    <File Include="bin/Core.Data.pdb">
+      <publishTime>06/21/2017 07:04:20</publishTime>
+    </File>
+    <File Include="bin/JBMapp.dll">
+      <publishTime>09/17/2017 06:07:58</publishTime>
+    </File>
+    <File Include="bin/JBMapp.pdb">
+      <publishTime>06/26/2017 06:47:17</publishTime>
+    </File>
+    <File Include="bin/JBMapp.XmlSerializers.dll">
+      <publishTime>09/17/2017 06:07:58</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>06/06/2017 05:21:12</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>06/06/2017 05:21:17</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>06/06/2017 05:21:11</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>06/06/2017 05:21:13</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>06/06/2017 05:21:11</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>06/06/2017 05:21:11</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>06/06/2017 05:21:11</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>06/06/2017 05:21:12</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>06/06/2017 05:21:12</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>06/06/2017 05:21:13</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css">
+      <publishTime>06/21/2017 08:11:07</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>06/21/2017 08:11:07</publishTime>
+    </File>
+    <File Include="Content/font-awesome.css">
+      <publishTime>06/30/2017 23:21:38</publishTime>
+    </File>
+    <File Include="Content/font-awesome.min.css">
+      <publishTime>06/30/2017 23:21:38</publishTime>
+    </File>
+    <File Include="Content/jquery.dataTables.min.css">
+      <publishTime>07/05/2017 13:15:18</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>06/21/2017 08:11:01</publishTime>
+    </File>
+    <File Include="Controllers/HomeController.cs">
+      <publishTime>06/28/2017 02:04:18</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>06/21/2017 08:11:01</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.eot">
+      <publishTime>06/30/2017 23:21:38</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.svg">
+      <publishTime>06/30/2017 23:21:38</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.ttf">
+      <publishTime>06/30/2017 23:21:38</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.woff">
+      <publishTime>06/30/2017 23:21:37</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.woff2">
+      <publishTime>06/30/2017 23:21:35</publishTime>
+    </File>
+    <File Include="fonts/FontAwesome.otf">
+      <publishTime>06/30/2017 23:21:38</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>06/21/2017 08:11:07</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>06/21/2017 08:11:07</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>06/21/2017 08:11:07</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>06/21/2017 08:11:06</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>06/21/2017 08:11:01</publishTime>
+    </File>
+    <File Include="Images/ring-alt.gif">
+      <publishTime>06/30/2017 01:04:21</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>06/30/2017 23:21:39</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>06/21/2017 08:11:06</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>06/21/2017 08:11:05</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.js">
+      <publishTime>06/21/2017 08:11:09</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.js">
+      <publishTime>06/21/2017 08:11:09</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.map">
+      <publishTime>06/21/2017 08:11:09</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.12.4.js">
+      <publishTime>07/05/2017 13:14:59</publishTime>
+    </File>
+    <File Include="Scripts/jquery-ui-1.12.0.js">
+      <publishTime>07/05/2017 13:41:59</publishTime>
+    </File>
+    <File Include="Scripts/jquery.dataTables.min.js">
+      <publishTime>07/05/2017 14:00:41</publishTime>
+    </File>
+    <File Include="Scripts/jquery.unobtrusive-ajax.js">
+      <publishTime>06/30/2017 01:03:20</publishTime>
+    </File>
+    <File Include="Scripts/jquery.unobtrusive-ajax.min.js">
+      <publishTime>06/30/2017 01:03:16</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.js">
+      <publishTime>06/21/2017 08:11:15</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.min.js">
+      <publishTime>06/21/2017 08:11:15</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.js">
+      <publishTime>06/21/2017 08:11:16</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.min.js">
+      <publishTime>06/21/2017 08:11:15</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.6.2.js">
+      <publishTime>06/21/2017 08:11:14</publishTime>
+    </File>
+    <File Include="Scripts/respond.js">
+      <publishTime>06/21/2017 08:11:15</publishTime>
+    </File>
+    <File Include="Scripts/respond.min.js">
+      <publishTime>06/21/2017 08:11:15</publishTime>
+    </File>
+    <File Include="Scripts/_references.js">
+      <publishTime>07/05/2017 14:46:01</publishTime>
+    </File>
+    <File Include="Views/Home/About.cshtml">
+      <publishTime>06/21/2017 08:11:01</publishTime>
+    </File>
+    <File Include="Views/Home/Contact.cshtml">
+      <publishTime>06/21/2017 08:11:01</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>07/05/2017 14:15:26</publishTime>
+    </File>
+    <File Include="Views/Home/ManageTFN.cshtml">
+      <publishTime>06/21/2017 08:57:22</publishTime>
+    </File>
+    <File Include="Views/ManageTFN/Index.cshtml">
+      <publishTime>07/11/2017 11:59:20</publishTime>
+    </File>
+    <File Include="Views/ProductCode/EditProductCode.cshtml">
+      <publishTime>09/16/2017 23:41:22</publishTime>
+    </File>
+    <File Include="Views/ProductCode/Index.cshtml">
+      <publishTime>09/16/2017 23:34:15</publishTime>
+    </File>
+    <File Include="Views/ProductCode/UploadProducts.cshtml">
+      <publishTime>07/06/2017 09:14:43</publishTime>
+    </File>
+    <File Include="Views/Script/AddNewScript.cshtml">
+      <publishTime>07/07/2017 08:14:22</publishTime>
+    </File>
+    <File Include="Views/Script/EditScript.cshtml">
+      <publishTime>07/07/2017 08:24:52</publishTime>
+    </File>
+    <File Include="Views/Script/Index.cshtml">
+      <publishTime>07/05/2017 15:01:47</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>06/21/2017 08:11:16</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>09/17/2017 06:00:55</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>06/21/2017 08:11:01</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>06/21/2017 08:11:01</publishTime>
+    </File>
+    <File Include="Web References/ADUC/Reference.map">
+      <publishTime>09/17/2017 05:26:44</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>09/17/2017 06:03:22</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
